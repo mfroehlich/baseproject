@@ -34,6 +34,18 @@ public class WorkflowEngineResource {
     @GET
     @Path("loadStatusByProcessInstanceId/{processId}")
     public String loadStatusByProcessInstanceId(@PathParam("processId") String processId) {
+        return getStatusString(processId);
+    }
+
+    @GET
+    @Path("completeCurrentTaskOfProcess/{processId}")
+    public String completeCurrentTaskOfProcess(@PathParam("processId") String processId) {
+        workflowEngineService.completeCurrentTaskOfProcess(processId);
+        String statusString = getStatusString(processId);
+        return "Task completed<br><br>" + statusString;
+    }
+
+    private String getStatusString(String processId) {
         Map<String, Object> variablesMap = workflowEngineService.loadVariablesByProcessId(processId);
         String taskIdByProcessId = workflowEngineService.loadCurrentTaskIdByProcessId(processId);
         String taskDefinitionIdByProcessId = workflowEngineService.loadCurrentTaskKeyByProcessId(processId);

@@ -16,4 +16,6 @@ public interface WorkflowEngineService {
     public String loadCurrentTaskIdByProcessId(String processId);
 
     public String loadCurrentTaskKeyByProcessId(String processId);
+
+    public void completeCurrentTaskOfProcess(String processId);
 }

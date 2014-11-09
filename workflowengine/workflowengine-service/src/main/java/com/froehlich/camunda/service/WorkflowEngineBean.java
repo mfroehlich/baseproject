@@ -46,18 +46,18 @@ public class WorkflowEngineBean implements WorkflowEngineService {
 
     public String loadCurrentTaskIdByProcessId(String processId) {
         Task task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
-        String taskId = task.getId();
+        String taskId = task != null ? task.getId() : null;
         return taskId;
     }
 
     public String loadCurrentTaskKeyByProcessId(String processId) {
         Task task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
-        String taskDefinitionKey = task.getTaskDefinitionKey();
+        String taskDefinitionKey = task != null ? task.getTaskDefinitionKey() : null;
         return taskDefinitionKey;
     }
 
-    public void doit(String processId) {
-        ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().processInstanceId(processId)
-                .singleResult();
+    public void completeCurrentTaskOfProcess(String processId) {
+        Task task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
+        taskService.complete(task.getId());
     }
 }
