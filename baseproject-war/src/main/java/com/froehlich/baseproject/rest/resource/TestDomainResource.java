@@ -11,15 +11,15 @@ import com.froehlich.baseproject.testdomain.service.TestDomainService;
  * Created by mfroehlich on 08.11.2014.
  */
 @Path("testdomain")
-public class WorkflowEngineResource {
+public class TestDomainResource {
 
     @Inject
     private TestDomainService testDomainService;
 
     @GET
     @Path("print/{string}")
-    public String startProcessInstance(@PathParam("string") String string) {
-        System.out.println("Output: " + string);
-        return "Success";
+    public String startProcessInstance(@PathParam("string") String outputString) {
+        System.out.println("Output: " + outputString);
+        return "Hello " + outputString;
     }
 }
