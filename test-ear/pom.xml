@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>baseproject</artifactId>
+        <groupId>com.froehlich</groupId>
+        <version>01.00.00-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.froehlich.baseproject</groupId>
+    <artifactId>test-ear</artifactId>
+    <packaging>ear</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.froehlich.baseproject.test-ejb</groupId>
+            <artifactId>test-ejb-service</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.froehlich.baseproject</groupId>
+            <artifactId>test-war</artifactId>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <!-- To be embedded into the pom.xml of the ear-project -->
+    <!-- Deploys application on Wildfly -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.1.Final</version>
+            </plugin>
+
+
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+
+                    <modules>
+                        <!-- Rename the REST-interface-warfile (root-context) in the generated application.xml  -->
+                        <webModule>
+                            <groupId>com.froehlich.baseproject</groupId>
+                            <artifactId>test-war</artifactId>
+                            <contextRoot>/restcontext</contextRoot>
+                        </webModule>
+                    </modules>
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
