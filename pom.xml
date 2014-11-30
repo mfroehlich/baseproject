@@ -5,51 +5,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.froehlich</groupId>
-    <artifactId>camundatest</artifactId>
+    <artifactId>baseproject</artifactId>
     <version>01.00.00-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.camunda.bpm</groupId>
-                <artifactId>camunda-engine</artifactId>
-                <version>7.1.0-Final</version>
-                <type>ejb</type>
-            </dependency>
-            <dependency>
-                <groupId>org.camunda.bpm</groupId>
-                <artifactId>camunda-engine-cdi</artifactId>
-                <version>7.1.0-Final</version>
-                <type>ejb</type>
-            </dependency>
-            <dependency>
-                <groupId>org.camunda.bpm.javaee</groupId>
-                <artifactId>camunda-ejb-client</artifactId>
-                <version>7.1.0-Final</version>
-                <type>ejb</type>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.uuid</groupId>
-                <artifactId>java-uuid-generator</artifactId>
-                <version>3.1.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.froehlich.camundatest.workflowengine</groupId>
-                <artifactId>workflowengine-client</artifactId>
+                <groupId>com.froehlich.baseproject.testdomain</groupId>
+                <artifactId>testdomain-client</artifactId>
                 <version>01.00.00-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.froehlich.camundatest.workflowengine</groupId>
-                <artifactId>workflowengine-service</artifactId>
+                <groupId>com.froehlich.baseproject.testdomain</groupId>
+                <artifactId>testdomain-service</artifactId>
                 <version>01.00.00-SNAPSHOT</version>
                 <type>ejb</type>
             </dependency>
 
             <dependency>
-                <groupId>com.froehlich.camundatest</groupId>
-                <artifactId>test-war</artifactId>
+                <groupId>com.froehlich.baseproject</groupId>
+                <artifactId>baseproject-war</artifactId>
                 <type>war</type>
                 <version>01.00.00-SNAPSHOT</version>
             </dependency>
@@ -67,9 +43,9 @@
     </dependencies>
 
     <modules>
-        <module>test-ear</module>
-        <module>test-war</module>
-        <module>workflowengine</module>
+        <module>baseproject-ear</module>
+        <module>baseproject-war</module>
+        <module>testdomain</module>
     </modules>
 
 </project>

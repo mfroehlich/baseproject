@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC
+	"-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN"
+	"http://java.sun.com/dtd/application_1_3.dtd">
+<application>
+  <display-name>baseproject-ear</display-name>
+  <module>
+    <web>
+      <web-uri>baseproject-war-01.00.00-SNAPSHOT.war</web-uri>
+      <context-root>/restcontext</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>testdomain-service-01.00.00-SNAPSHOT.jar</ejb>
+  </module>
+</application>
