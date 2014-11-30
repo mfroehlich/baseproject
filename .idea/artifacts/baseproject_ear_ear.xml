@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ear" name="baseproject-ear:ear">
-    <output-path>$PROJECT_DIR$/baseproject-ear/target</output-path>
-    <root id="archive" name="baseproject-ear-01.00.00-SNAPSHOT.ear">
-      <element id="artifact" artifact-name="baseproject-ear:ear exploded" />
-    </root>
-  </artifact>
-</component>
