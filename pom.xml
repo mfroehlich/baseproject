@@ -4,7 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.froehlich</groupId>
+    <parent>
+        <groupId>com.froehlich</groupId>
+        <artifactId>commons</artifactId>
+        <version>01.00.00-SNAPSHOT</version>
+    </parent>
+
     <artifactId>baseproject</artifactId>
     <version>01.00.00-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -32,20 +37,11 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.spec</groupId>
-            <artifactId>jboss-javaee-7.0</artifactId>
-            <version>1.0.1.Final</version>
-            <type>pom</type>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
     <modules>
         <module>baseproject-ear</module>
         <module>baseproject-war</module>
         <module>testdomain</module>
+        <module>../utils</module>
     </modules>
 
 </project>
