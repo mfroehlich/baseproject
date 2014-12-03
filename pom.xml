@@ -41,7 +41,6 @@
         <module>baseproject-ear</module>
         <module>baseproject-war</module>
         <module>testdomain</module>
-        <module>../utils</module>
     </modules>
 
 </project>
