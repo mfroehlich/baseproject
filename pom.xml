@@ -27,6 +27,11 @@
                 <version>01.00.00-SNAPSHOT</version>
                 <type>ejb</type>
             </dependency>
+            <dependency>
+                <groupId>com.froehlich</groupId>
+                <artifactId>baseproject-commons</artifactId>
+                <version>01.00.00-SNAPSHOT</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.froehlich.baseproject</groupId>
@@ -37,10 +42,18 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
+
     <modules>
         <module>baseproject-ear</module>
         <module>baseproject-war</module>
         <module>testdomain</module>
+        <module>baseproject-commons</module>
     </modules>
 
 </project>

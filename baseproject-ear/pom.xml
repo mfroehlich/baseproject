@@ -15,6 +15,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.froehlich</groupId>
+            <artifactId>baseproject-commons</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.froehlich.baseproject.testdomain</groupId>
             <artifactId>testdomain-service</artifactId>
             <type>ejb</type>
