@@ -12,5 +12,11 @@
     <groupId>com.froehlich.baseproject</groupId>
     <artifactId>baseproject-commons</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.froehlich.monitoring</groupId>
+            <artifactId>monitoring-client</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

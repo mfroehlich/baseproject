@@ -20,6 +20,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.froehlich.monitoring</groupId>
+            <artifactId>monitoring-service</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
             <groupId>com.froehlich.baseproject.testdomain</groupId>
             <artifactId>testdomain-service</artifactId>
             <type>ejb</type>

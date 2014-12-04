@@ -23,6 +23,18 @@
             </dependency>
 
             <dependency>
+                <groupId>com.froehlich.monitoring</groupId>
+                <artifactId>monitoring-client</artifactId>
+                <version>01.00.00-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.froehlich.monitoring</groupId>
+                <artifactId>monitoring-service</artifactId>
+                <version>01.00.00-SNAPSHOT</version>
+                <type>ejb</type>
+            </dependency>
+
+            <dependency>
                 <groupId>com.froehlich.baseproject.testdomain</groupId>
                 <artifactId>testdomain-client</artifactId>
                 <version>01.00.00-SNAPSHOT</version>
