@@ -19,7 +19,7 @@ public class MathResource {
     @GET
     @Path("add/{summand1}/{summand2}")
     public String add(@PathParam("summand1") String summand1, @PathParam("summand2") String summand2) {
-        int sum = mathService.addNumbers(new Integer(summand1), new Integer(summand2));
+        int sum = mathService.addNumbers(summand1, summand2);
         return "Sum of " + summand1 + " and " + summand2 + " is " + sum;
     }
 }

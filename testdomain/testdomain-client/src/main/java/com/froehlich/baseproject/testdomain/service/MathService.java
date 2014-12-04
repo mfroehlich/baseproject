@@ -5,5 +5,5 @@ package com.froehlich.baseproject.testdomain.service;
  */
 public interface MathService {
 
-    public int addNumbers(int a, int b);
+    public int addNumbers(String a, String b);
 }

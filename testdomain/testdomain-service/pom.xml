@@ -15,6 +15,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.froehlich.monitoring</groupId>
+            <artifactId>monitoring-client</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.froehlich.baseproject.testdomain</groupId>
             <artifactId>testdomain-client</artifactId>
         </dependency>
