@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.froehlich</groupId>
+            <groupId>com.froehlich.baseproject</groupId>
             <artifactId>baseproject-commons</artifactId>
         </dependency>
 
